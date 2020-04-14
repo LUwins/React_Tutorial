@@ -1,1 +1,15 @@
-body { }
+body {
+
+}
+
+.navbar { 
+    height: 100px;
+    background-color: purple;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
