@@ -4,26 +4,16 @@ import Maincontent from "./Maincontent"
 import Header from "./Header"
 import ContactCard from "./ContactCard"
 import Joke from "./joke"
+import productsData from "../importfiles/vschoolProducts"
+import Product from "./Product"
 
 function App() {
+
+    const productcomponents = productsData.map(item => <Product product={item}/>)
+    
     return(
         <div>
-            <Joke 
-                setup="line 1"
-                punch="line 2"
-                />
-            <Joke
-                setup="line 1"
-                punch="line 2"
-                />
-            <Joke
-                setup="line 1"
-                punch="line 2"
-                />
-            <Joke 
-               setup="line 1"
-               punch="line 2"
-               />
+            {productcomponents}
         </div>
     )
 }
