@@ -9,15 +9,24 @@ import Product from "./Product"
 import todosData from "../importfiles/todosData"
 import Todoitem from "./TodoItem"
 
-function App() {
+class App extends React.Component {
 
-    const todoitems = todosData.map(item => <Todoitem key={item.id} item={item}/>)
+    constructor() {
+        super()
+        this.state = {
+            name: "Laurence",
+            age: 22
+        }
+    }
 
-    return(
-       <div className="todo-list">      
-            {todoitems}        
-       </div>
-    )
+    render(){
+        return(
+            <div>      
+                 <h1>{this.state.name}</h1>    
+                 <h3>is {this.state.age} years old</h3>  
+            </div>
+         )
+    }
 }
 
 export default App
