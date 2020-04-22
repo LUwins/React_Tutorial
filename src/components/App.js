@@ -6,15 +6,17 @@ import ContactCard from "./ContactCard"
 import Joke from "./joke"
 import productsData from "../importfiles/vschoolProducts"
 import Product from "./Product"
+import todosData from "../importfiles/todosData"
+import Todoitem from "./TodoItem"
 
 function App() {
 
-    const productcomponents = productsData.map(item => <Product product={item}/>)
-    
+    const todoitems = todosData.map(item => <Todoitem key={item.id} item={item}/>)
+
     return(
-        <div>
-            {productcomponents}
-        </div>
+       <div className="todo-list">      
+            {todoitems}        
+       </div>
     )
 }
 
