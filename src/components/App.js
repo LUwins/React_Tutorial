@@ -6,16 +6,27 @@ import ContactCard from "./ContactCard"
 import Joke from "./joke"
 import productsData from "../importfiles/vschoolProducts"
 import Product from "./Product"
+import todosData from "../importfiles/todosData"
+import Todoitem from "./TodoItem"
 
-function App() {
+class App extends React.Component {
 
-    const productcomponents = productsData.map(item => <Product product={item}/>)
-    
-    return(
-        <div>
-            {productcomponents}
-        </div>
-    )
+    constructor() {
+        super()
+        this.state = {
+            name: "Laurence",
+            age: 22
+        }
+    }
+
+    render(){
+        return(
+            <div>      
+                 <h1>{this.state.name}</h1>    
+                 <h3>is {this.state.age} years old</h3>  
+            </div>
+         )
+    }
 }
 
 export default App
