@@ -10,22 +10,26 @@ import todosData from "../importfiles/todosData"
 import Todoitem from "./TodoItem"
 
 class App extends React.Component {
-
-    constructor() {
+    constructor(){
         super()
         this.state = {
-            name: "Laurence",
-            age: 22
+            isLoggedIn: true
         }
     }
 
-    render(){
-        return(
-            <div>      
-                 <h1>{this.state.name}</h1>    
-                 <h3>is {this.state.age} years old</h3>  
+    render() {
+        let wordDisplay
+        if (this.state.isLoggedIn){
+            wordDisplay = "in"
+        }
+        else{
+            wordDisplay = "out"
+        }
+        return (
+            <div>
+                <h1>You are currently logged {wordDisplay}</h1>
             </div>
-         )
+        )
     }
 }
 
