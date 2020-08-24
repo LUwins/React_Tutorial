@@ -7,30 +7,21 @@ import Joke from "./joke"
 import productsData from "../importfiles/vschoolProducts"
 import Product from "./Product"
 import todosData from "../importfiles/todosData"
-import Todoitem from "./TodoItem"
+import TodoItem from "./TodoItem"
 
-class App extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            isLoggedIn: true
-        }
-    }
+function handleClick(){
+    console.log("i was clicked")
+}
 
-    render() {
-        let wordDisplay
-        if (this.state.isLoggedIn){
-            wordDisplay = "in"
-        }
-        else{
-            wordDisplay = "out"
-        }
-        return (
-            <div>
-                <h1>You are currently logged {wordDisplay}</h1>
-            </div>
-        )
-    }
+function App() {
+    return (
+        <div>
+            <img src="https://www.fillmurray.com/400/200"/>
+            <br />
+            <br />
+            <button onClick={handleClick}>Click me</button>
+        </div>
+    )
 }
 
 export default App
