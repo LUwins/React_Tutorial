@@ -7,26 +7,21 @@ import Joke from "./joke"
 import productsData from "../importfiles/vschoolProducts"
 import Product from "./Product"
 import todosData from "../importfiles/todosData"
-import Todoitem from "./TodoItem"
+import TodoItem from "./TodoItem"
 
-class App extends React.Component {
+function handleClick(){
+    console.log("i was clicked")
+}
 
-    constructor() {
-        super()
-        this.state = {
-            name: "Laurence",
-            age: 22
-        }
-    }
-
-    render(){
-        return(
-            <div>      
-                 <h1>{this.state.name}</h1>    
-                 <h3>is {this.state.age} years old</h3>  
-            </div>
-         )
-    }
+function App() {
+    return (
+        <div>
+            <img src="https://www.fillmurray.com/400/200"/>
+            <br />
+            <br />
+            <button onClick={handleClick}>Click me</button>
+        </div>
+    )
 }
 
 export default App
